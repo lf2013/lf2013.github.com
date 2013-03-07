@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: New Start!
+tagline: I'm glad you are here!
 ---
 {% include JB/setup %}
 Welcome to lf2013's world!
