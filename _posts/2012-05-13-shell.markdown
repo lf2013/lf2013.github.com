@@ -5,18 +5,7 @@ date: 2012-05-13 18:50
 comments: true
 categories: 
 ---
-{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
 ssssssssss
-{% highlight c %}
-	int main()
-	{
-		return 0;
-	}
-{% endhighlight %}
 ```c
 	int main()
 	{
