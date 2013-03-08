@@ -6,6 +6,12 @@ comments: true
 categories: 
 ---
 ssssssssss
+{% highlight c %}
+	int main()
+	{
+		return 0;
+	}
+{% endhighlight %}
 ```c
 	int main()
 	{
