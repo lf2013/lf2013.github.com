@@ -122,7 +122,9 @@ ul.entries a:hover {
 }
 
 footer {
-  font-size: 0.65em;
+  font-size: 9pt;
+  font-style: italic;
+  padding-top: 30pt;
   rubyt-align: center;
 }
 body div.content {}
