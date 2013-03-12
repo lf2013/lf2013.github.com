@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: ft2
 title: "疯狂不是程序员的全部"
 date: 2012-03-06 23:54
 comments: true

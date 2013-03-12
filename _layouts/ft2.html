@@ -3,11 +3,10 @@
   <head>
     <meta charset=utf-8 />
     <title>
-      {% if page.title %} {{ page.title }} | {% endif %} John Doe, Photographer
+      {% if page.title %} {{ page.title }} | {% endif %} 
     </title>
     <link rel="stylesheet" href="/css/pygments.css" />
   </head>
-
   <body>
     <div id="main">
       <header>
@@ -19,26 +18,27 @@
                 <a href="/"> Home </a>
               </li>
               <li>
-                <a href="../archive.html"> Archive </a>
+                <a href="/archive.html"> Archive </a>
               </li>
               <li>
-                <a href="../categories.html"> Categories</a>
+                <a href="/categories.html"> Categories</a>
               </li>
               <li>
-                <a href="../tags.html"> Tags</a>
-              </li>
-              <li>
-                <a href="../about.html"> About </a>
+                <a href="/about.html"> About </a>
               </li>
             </ul>
 			<audio controls="controls">
 			  <source src="/audio/Lydia.mp3" type="audio/mpeg">
-			Your browser does not support the audio tag.
 			</audio>
 
           </nav>
+		<h1>{{page.title}}</h1> 
+			{{page.date}}
           {{ content }}
           <footer>
+		<a href={{page.previous.url}}>之前的</a>
+		<a href="/archive.html">目录</a>
+		<a href={{page.next.url}}>更新的</a>
             <p>
               @copy; Luoluo 2011-2013 | All Rights Reserved.
             </p>
