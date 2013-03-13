@@ -127,3 +127,11 @@ footer {
   padding-top: 30pt;
   rubyt-align: center;
 }
+body div.content {}
+    body div.content code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #000000;
+    }
