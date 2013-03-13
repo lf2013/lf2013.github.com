@@ -1,5 +1,5 @@
 ---
-layout: ft2 
+layout: post
 title: "最近的一些思考"
 date: 2013-03-11 15:12
 comments: true
