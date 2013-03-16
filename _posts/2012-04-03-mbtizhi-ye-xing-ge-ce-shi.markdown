@@ -3,7 +3,7 @@ layout: post
 title: "MBTI职业性格测试"
 date: 2012-04-03 12:31
 comments: true
-categories: [FeelStream,Travel]
+categories: [FeelStream, Travel]
 ---
 在浏览博客时看到测试，想起高考的时候的测试，早就忘记结果了，当时也没有好好参考。今天来感，就在两个不同网站测试了下，结果一致的出乎意料————INFJ。
 
