@@ -221,3 +221,4 @@ case 可以有任意多个，要点是注意每个case以break结束，因为一
 		...//代码下期给出	
 	}
 {% endhighlight %}
+[答案戳这里](/HeadStream/Tutorial/How-to/2013/03/16/learningc2/)
