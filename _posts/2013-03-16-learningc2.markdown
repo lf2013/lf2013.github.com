@@ -7,7 +7,7 @@ categories: [HeadStream, Tutorial, How-to]
 ---
 ##目标
 白话C，最短时间内写出简单C程序.
-进阶篇
+**进阶篇**
 ##关键字
 + 1.数据聚合
 + 2.运算符

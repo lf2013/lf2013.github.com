@@ -7,7 +7,7 @@ categories: [HeadStream, Tutorial, How-to]
 ---
 ##目标
 白话C，最短时间内写出简单C程序.
-基础篇
+**基础篇**
 ##关键字
 + 1.变量
 + 2.控制结构
