@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "数一数"
+title: "无0数字系统"
 date: 2013-03-31 10:17
 comments: true
 categories: [HeadStream, Math]
