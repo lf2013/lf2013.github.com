@@ -59,7 +59,7 @@
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
 body {
-  font: 16px/1.5 verdana, helvetica-neue, helvetica, arial, san-serif;
+  font: 16px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;
   padding: 0;
   background: black;
   margin: 10px 40px 10px 100px;

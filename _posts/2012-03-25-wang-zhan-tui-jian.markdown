@@ -3,7 +3,7 @@ layout: post
 title: "网站推荐"
 date: 2012-03-17 10:50
 comments: true
-categories: [BackYard, Note, Math]
+categories: [Note, How-to]
 ---
 
 1.http://mathworld.wolfram.com   

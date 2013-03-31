@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu 无线路由问题"
 date: 2012-03-23 01:51
 comments: true
-categories: [linux, ubuntu]
+categories: [linux]
 ---
 
 ubuntu 11.10 后，笔记本常常出现搜不到寝室路由的无线信号，但是在这种情况下却可以搜到其他人的无线信号。笔记本是WINDOWS和UBUNTU的双系统，当切换到WINDOWS下时，就可以正常的搜索到并成功连接。问题出现在了哪里呢？
