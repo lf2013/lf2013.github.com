@@ -6,10 +6,10 @@ comments: true
 categories: [Note]
 ---
 ###Machine
-####VMware + Ubuntu 
+#####VMware + Ubuntu 
 Use 12.04 LTS(a stable version) instead of a unstable version.
 
-####git ssh
+#####git ssh
 I have just reinstalled the system or I'v just get a new machine.
 1. install git
 2. get a friend usr(get ssh key)
