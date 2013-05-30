@@ -1,0 +1,23 @@
+---
+layout: post
+title: "fastOn"
+date: 2013-05-29 19:17
+comments: true
+categories: [Note]
+---
+###Machine
+####VMware + Ubuntu 
+Use 12.04 LTS(a stable version) instead of a unstable version.
+
+####git ssh
+I have just reinstalled the system or I'v just get a new machine.
+1. install git
+2. get a friend usr(get ssh key)
+3. add the usr as a Collaborator of the old project.
+4. the usr is free to push to the origin project.    
+
+#####ruby gem jekyll
+1.install gem(sudo apt-get install ruby/rubygem)
+2.gem install jekyll   
+3.jekyll server --watch  #watch the change at the time you save the file.   
+It seems that the new version has replaced 'auto' by 'watch'
