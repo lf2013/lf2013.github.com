@@ -9,7 +9,7 @@ categories: [Note]
 When my workmate has spent lots of time working to get a ubuntu run on computer, but failed. We finally decided to copy my virtual ubuntu to him and add a new user account for him, which turns out to be a good good idea.
 The command used are as follows:
 
-{% highlight sh %}
+{% highlight c %}
 geek@ubuntuServ:/etc/skel$ sudo adduser thegeek
 Password:
 Adding user 'thegeek’…
