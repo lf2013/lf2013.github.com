@@ -12,11 +12,11 @@ The command used are as follows:
 {% highlight sh %}
 geek@ubuntuServ:/etc/skel$ sudo adduser thegeek
 Password:
-Adding user `thegeek’…
-Adding new group `thegeek’ (1004).
-Adding new user `thegeek’ (1004) with group `thegeek’.
-Creating home directory `/home/thegeek’.
-Copying files from `/etc/skel’
+Adding user 'thegeek’…
+Adding new group 'thegeek’ (1004).
+Adding new user 'thegeek’ (1004) with group 'thegeek’.
+Creating home directory '/home/thegeek’.
+Copying files from '/etc/skel’
 Enter new UNIX password:
 Retype new UNIX password:
 No password supplied
