@@ -8,7 +8,10 @@ categories: [Note]
 ###Machine
 #####VMware + Ubuntu 
 Use 12.04 LTS(a stable version) instead of a unstable version.
-
+####softwares
+>vim
+>git
+>
 #####git ssh
 I have just reinstalled the system or I'v just get a new machine.
 1. install git
