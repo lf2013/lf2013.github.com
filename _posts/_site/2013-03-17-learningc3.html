@@ -1,0 +1,166 @@
+<h2 id='id46'>目标</h2>
+
+<p>白话C，最短时间内写出简单C程序. <strong>终极篇</strong></p>
+
+<h2 id='id47'>关键字</h2>
+
+<ul>
+<li>1.宏</li>
+
+<li>2.指针</li>
+
+<li>3.++函数</li>
+</ul>
+<hr />
+<h3 id='id48'>上期答案</h3>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>fib</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>x</span><span class='p'>){</span>
+	<span class='k'>if</span><span class='p'>(</span><span class='n'>x</span> <span class='o'>&lt;=</span> <span class='mi'>1</span><span class='p'>)</span>  <span class='c1'>//边界返回</span>
+		<span class='k'>return</span> <span class='mi'>1</span><span class='p'>;</span>		
+	<span class='k'>else</span> 
+		<span class='k'>return</span> <span class='n'>fib</span><span class='p'>(</span><span class='n'>x</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span> <span class='o'>+</span> <span class='n'>fib</span><span class='p'>(</span><span class='n'>x</span><span class='o'>-</span><span class='mi'>2</span><span class='p'>);</span> <span class='c1'>//递归调用</span>
+<span class='p'>}</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>i</span><span class='p'>;</span>
+	<span class='k'>for</span><span class='p'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span><span class='n'>i</span> <span class='o'>&lt;</span> <span class='mi'>10</span><span class='p'>;</span><span class='n'>i</span><span class='o'>++</span><span class='p'>)</span>
+		<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;fib(%d) = %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='n'>i</span><span class='p'>,</span> <span class='n'>fib</span><span class='p'>(</span><span class='n'>i</span><span class='p'>));</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>	
+<span class='p'>}</span>
+</code></pre></div><hr />
+<h3 id='id49'>宏</h3>
+
+<h4 id='id50'>考虑以下情形</h4>
+
+<blockquote>
+<p>编程时有重复出现的<em>数值常量</em>,分散与程序的各个角落，要对其值修改时，情形将困囧起来。 条件编译，按需求编译程序的不同部分，程序移植.</p>
+</blockquote>
+
+<p>本质上说，宏是在<em>预编译时的纯替换</em></p>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='cp'>#define MAX 20 </span><span class='c1'>//即增加可读性，又便于修改</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>stu</span><span class='p'>[</span><span class='n'>MAX</span><span class='p'>],</span> <span class='n'>i</span><span class='p'>;</span>
+	<span class='k'>for</span><span class='p'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span><span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>MAX</span><span class='p'>;</span><span class='n'>i</span><span class='o'>++</span><span class='p'>){</span>
+		<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d</span><span class='se'>\t</span><span class='s'>%d&quot;</span><span class='p'>,</span> <span class='n'>i</span><span class='p'>,</span> <span class='n'>stu</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]);</span>		
+	<span class='p'>}</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div><hr />
+<h3 id='id51'>指针</h3>
+
+<blockquote>
+<p><em>C的魅力所在，也是C coder的噩梦。</em></p>
+</blockquote>
+
+<p>指针也是C的类型，于是乎有<strong>指针常量</strong> <strong>指针变量</strong>。我理解的<em>指针类型是标识地址的一种类型</em>，就像通过“经纪人”找“歌手”，我们通过“指针”来访问“变量”。指针本身的<strong>值</strong>是地址，通过地址，我们可以访问其他变量、函数。</p>
+
+<h5 id='__'>两个操作符 * &amp;</h5>
+
+<ul>
+<li>
+<p>1.&amp;是取地址操作符</p>
+</li>
+
+<li>
+<p>2.*是地址访问操作符</p>
+
+<h5 id='id52'>指针变量的声明、初始化、访问</h5>
+</li>
+</ul>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pa</span><span class='p'>;</span> <span class='c1'>//声明指针变量pa</span>
+	<span class='n'>pa</span> <span class='o'>=</span> <span class='o'>&amp;</span><span class='n'>a</span><span class='p'>;</span>	<span class='c1'>//为pa初始化为a的地址</span>
+	<span class='c1'>//此时pa存储a的地址，可以说pa指向a </span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='n'>a</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>pa</span><span class='p'>);</span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='o'>&amp;</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>pa</span><span class='p'>);</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<h5 id='id53'>指针变量是变量也可以被指向</h5>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pa</span> <span class='o'>=</span> <span class='o'>&amp;</span><span class='n'>a</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>**</span><span class='n'>ppa</span> <span class='o'>=</span> <span class='o'>&amp;</span><span class='n'>pa</span><span class='p'>;</span> <span class='c1'>//ppa是指向pa的指针</span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='n'>a</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>pa</span><span class='p'>,</span> <span class='o'>**</span><span class='n'>ppa</span><span class='p'>);</span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='o'>&amp;</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>pa</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>ppa</span><span class='p'>);</span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='o'>&amp;</span><span class='n'>pa</span><span class='p'>,</span> <span class='n'>pa</span><span class='p'>);</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<h5 id='id54'>常量指针与指针的运算</h5>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span><span class='p'>[]</span> <span class='o'>=</span> <span class='p'>{</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>,</span> <span class='mi'>5</span><span class='p'>,</span> <span class='mi'>6</span><span class='p'>};</span>	<span class='c1'>//a是数组名，数组名的值是数组在内存的首地址，所以数组名是指针;</span>
+						<span class='c1'>//编译后数组在内存里的位置确定，a的值不会改变，所以*数组名是常量指针*</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>p</span> <span class='o'>=</span> <span class='n'>a</span><span class='p'>;</span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='n'>a</span><span class='p'>,</span> <span class='o'>*</span><span class='n'>p</span><span class='p'>);</span>
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d %d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='n'>a</span><span class='p'>[</span><span class='mi'>1</span><span class='p'>],</span> <span class='o'>*</span><span class='p'>(</span><span class='n'>p</span><span class='o'>+</span><span class='mi'>1</span><span class='p'>));</span><span class='c1'>//a[i] &lt;==&gt; *(p+i)</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>	
+</code></pre></div><hr />
+<h4 id='id55'>指针相关运算</h4>
+
+<ul>
+<li>a.指针+/-整型</li>
+
+<li>b.指针+/-指针</li>
+
+<li>c.指针关系运算符</li>
+
+<li>d.指针sizeof</li>
+</ul>
+
+<p>指针算数运算的<strong>自调节机制</strong>：</p>
+
+<blockquote>
+<p>a.<em>指针在与整型运算前会进行调整，将指针指向类型的大小来与整型相乘，再加。结果为__指针类型__</em></p>
+</blockquote>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span><span class='p'>[]</span> <span class='o'>=</span> <span class='p'>{</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>};</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pa</span> <span class='o'>=</span> <span class='n'>a</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pb</span> <span class='o'>=</span> <span class='n'>pa</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>;</span> 
+	<span class='c1'>//int *pb = &amp;a[1]; 与上条等效</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<blockquote>
+<p>b.<em>指针与指针类型算术运算，只有二者指向相同数组，结果才是定义了的。结果为__整型__</em></p>
+</blockquote>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span><span class='p'>[]</span> <span class='o'>=</span> <span class='p'>{</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>};</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pa</span> <span class='o'>=</span> <span class='n'>a</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pb</span> <span class='o'>=</span> <span class='o'>&amp;</span><span class='n'>a</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>];</span> 
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;pa - pb = %d&quot;</span><span class='p'>,</span> <span class='n'>pa</span> <span class='o'>-</span> <span class='n'>pb</span><span class='p'>);</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<blockquote>
+<p>c.<em>指针与指针类型关系运算，只有二者指向相同数组，结果才是定义了的。结果为__真或假__</em></p>
+</blockquote>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span><span class='p'>[]</span> <span class='o'>=</span> <span class='p'>{</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>};</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pa</span> <span class='o'>=</span> <span class='n'>a</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pb</span> <span class='o'>=</span> <span class='o'>&amp;</span><span class='n'>a</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>];</span> 
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;pa &gt; pb = %d&quot;</span><span class='p'>,</span> <span class='n'>pa</span> <span class='o'>&gt;</span> <span class='n'>pb</span><span class='p'>);</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div>
+<blockquote>
+<p>d.<em>指针的sizeof运算：直接作用于指针变量，返回指针变量的大小(4或8);对于数组名,会返回该数组的大小</em></p>
+</blockquote>
+<div class='highlight'><pre><code class='c'><span class='cp'>#include &lt;stdio.h&gt;</span>
+<span class='kt'>int</span> <span class='nf'>main</span><span class='p'>(){</span>
+	<span class='kt'>int</span> <span class='n'>a</span><span class='p'>[]</span> <span class='o'>=</span> <span class='p'>{</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>};</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pa</span> <span class='o'>=</span> <span class='n'>a</span><span class='p'>;</span>
+	<span class='kt'>int</span> <span class='o'>*</span><span class='n'>pb</span> <span class='o'>=</span> <span class='n'>pa</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>;</span> 
+	<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;sizeof(a) = %d sizeof(pa) = %d&quot;</span><span class='p'>,</span> <span class='k'>sizeof</span><span class='p'>(</span><span class='n'>a</span><span class='p'>),</span> <span class='k'>sizeof</span><span class='p'>(</span><span class='n'>pa</span><span class='p'>));</span>
+	<span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre></div><hr />
+<h3 id='id56'>先告一段落，还待完善。若有问题，敬请指出。</h3>

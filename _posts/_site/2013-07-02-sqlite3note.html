@@ -1,0 +1,69 @@
+<p>Recently I wirte a spider to greb infomation. And I have to store the data somewhere for reuse. And I chose sqlite. Here are the command used in python.</p>
+
+<h4 id='import_the_package'>import the package</h4>
+
+<blockquote>
+<p>import sqlite3</p>
+</blockquote>
+
+<h4 id='connect_to_a_db'>connect to a db</h4>
+
+<blockquote>
+<p>con = sqlire3.connect(&#8220;dbname&#8221;)</p>
+</blockquote>
+
+<h4 id='get_a_cursor'>get a cursor</h4>
+
+<blockquote>
+<p>cur = con.cursor()</p>
+</blockquote>
+
+<h4 id='initial_db'>initial db</h4>
+
+<blockquote>
+<p>cur.execute(&#8221;&#8216;creat table if not exists tablename(id integer, name text, score real)&#8221;&#8217;)</p>
+</blockquote>
+
+<h4 id='insert_into_db'>insert into db</h4>
+
+<blockquote>
+<p>val = <span>12, &#8216;asdf&#8217;, 12.0</span> cur.execute(&#8216;insert into doc values(?,?,?)&#8217;, val) con.commit()</p>
+</blockquote>
+
+<h4 id='select_from_db'>select from db</h4>
+
+<blockquote>
+<p>result = cur.execute(&#8216;select * from doc&#8217;)</p>
+</blockquote>
+
+<h4 id='use_the_selected_result'>use the selected result</h4>
+
+<blockquote>
+<p>rows = result.fetchall() for row in rows:</p>
+
+<blockquote>
+<p>print row</p>
+</blockquote>
+
+<p>row = result.fetchone()</p>
+
+<blockquote>
+<p>print row</p>
+</blockquote>
+</blockquote>
+
+<h4 id='update_db'>update db</h4>
+
+<blockquote>
+<p>cur.execute(&#8216;update doc det score = ? where id = ?&#8217;, (score, id)) con.commit()</p>
+</blockquote>
+
+<h4 id='view_db_in_shell'>view db in shell</h4>
+
+<blockquote>
+<p>sqlite3 dbname <br />select * from doc;</p>
+</blockquote>
+
+<h4 id='tips'>tips:</h4>
+
+<p>Don&#8217;t forget to commit()</p>

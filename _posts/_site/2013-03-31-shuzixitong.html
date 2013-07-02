@@ -1,0 +1,113 @@
+<pre><code>由现今的考古证据可以推测人类计数的历史至少有五万年，并由此发展导致出数学符号及记数系统的发展。</code></pre>
+<hr />
+<p>做CF的时一有意思的<a href='http://codeforces.com/problemset/problem/1/B'>计数问题</a></p>
+
+<blockquote>
+<p>使用<code>A-Z</code>26个表示计数，第1个是A，第2个是B，&#8230;，第26个是Z；然后是两个字母表示：27是AA，28是AB, 52是AZ;然后是3个数字来表示&#8230;</p>
+</blockquote>
+<hr />
+<h2 id='id1'>标号系统</h2>
+
+<h4 id='id2'>单记号系统</h4>
+
+<p>数字系统转换的问题，对于数字系统，先由一个极端的例子说起，假设只有一个标记<em><code>A</code></em></p>
+
+<pre><code>标号	数字
+A		1
+AA		2
+AAA		3
+AAAA	4
+...		...</code></pre>
+
+<p>显然得到的是一个<strong>一进制系统</strong>,<em>每个位的权重均为1，A的个数即为数值</em>。<br />数学化表达： $$sum = \sum_{k=0}^n v_kn_k $$ 注： v_k表示权重，此时权重均为1，n_k表示当前的值.</p>
+<hr />
+<h4 id='id3'>双符号系统</h4>
+
+<pre><code>本数字系统有两个标记：A B
+标号	数字
+A		1
+B		2
+AA		3
+AB	    4
+AAA		5
+AAB		6
+...		...</code></pre>
+
+<p>显然得到的是一个<strong>二进制系统</strong>,<em>每个位的权重均为2</em>，但该二进制系统是<strong>1-2</strong>系统(A的数值为1，B的数值为2) 数学化表达： $$sum = \sum_{k=0}^n v_kn_k $$ 注：</p>
+
+<pre><code>v_k表示权重，此时权重均为1,2,4,..，n_k表示当前的值.</code></pre>
+<hr />
+<h4 id='id4'>多符号系统</h4>
+
+<pre><code>使用26个标记：A - Z 
+标号	数字
+A		1
+B		2
+C		3
+...
+Z		26
+AA		27
+AB	    28
+...
+AZ		52
+BA		53
+AAA		
+...</code></pre>
+
+<p>显然得到的是一个<strong>26进制系统</strong>,<em>每个位的权重均为2</em>，但该二进制系统是<strong>1-26</strong>系统(A-1，B-2，C-3，&#8230;,Z-26) 数学化表达： 数学化表达： $$sum = \sum_{k=0}^n v_kn_k $$ 注： v_k表示权重，此时权重均为1,26,26^2,..，n_k表示当前的值.</p>
+<hr />
+<h3 id='id5'>数值系统的转换</h3>
+
+<p>之前的的<strong>数学化</strong>表示只是由标号系统到十进制。现在考虑一下<strong>十进制到标号系统；任意标号系统间转换</strong></p>
+
+<h4 id='__'>十进制 到 标号系统</h4>
+
+<p>与一般的<strong>二进制</strong>区别主要在于不是<strong>0-1</strong>系统而是<strong>1-2</strong>系统，所以转换从低位到高位进行：</p>
+
+<h5 id='id6'>标号系统到十进制</h5>
+<div class='highlight'><pre><code class='c'><span class='kt'>void</span> <span class='nf'>deal</span><span class='p'>(</span><span class='kt'>char</span> <span class='n'>arr</span><span class='p'>[])</span>
+<span class='p'>{</span>
+		<span class='kt'>int</span> <span class='n'>j</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>,</span> <span class='n'>c</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>,</span> <span class='n'>r</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span>
+		<span class='k'>while</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='o'>&gt;=</span> <span class='sc'>&#39;A&#39;</span> <span class='o'>&amp;&amp;</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='o'>&lt;=</span> <span class='sc'>&#39;Z&#39;</span><span class='p'>){</span>
+			<span class='n'>c</span> <span class='o'>*=</span> <span class='mi'>26</span><span class='p'>;</span>
+			<span class='n'>c</span> <span class='o'>+=</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='o'>-</span> <span class='sc'>&#39;A&#39;</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>;</span>
+			<span class='n'>j</span><span class='o'>++</span><span class='p'>;</span>
+		<span class='p'>}</span>
+		<span class='k'>for</span><span class='p'>(;</span><span class='n'>j</span> <span class='o'>&lt;</span> <span class='n'>strlen</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>);</span><span class='n'>j</span><span class='o'>++</span><span class='p'>){</span>
+			<span class='n'>r</span> <span class='o'>*=</span> <span class='mi'>10</span><span class='p'>;</span>
+			<span class='n'>r</span> <span class='o'>+=</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='o'>-</span> <span class='sc'>&#39;0&#39;</span><span class='p'>;</span>
+		<span class='p'>}</span> 
+		<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%d</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span> <span class='n'>r</span><span class='p'>);</span>
+	<span class='p'>}</span>
+<span class='p'>}</span>
+</code></pre></div>
+<h5 id='id7'>十进制到标号系统</h5>
+<div class='highlight'><pre><code class='c'><span class='kt'>void</span> <span class='nf'>deal</span><span class='p'>(</span><span class='kt'>char</span> <span class='n'>arr</span><span class='p'>[])</span>
+<span class='p'>{</span>
+	<span class='kt'>int</span> <span class='n'>len</span> <span class='o'>=</span> <span class='n'>strlen</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>),</span> <span class='n'>c</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>,</span> <span class='n'>j</span><span class='p'>;</span>
+
+		<span class='k'>for</span><span class='p'>(</span><span class='n'>j</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span><span class='n'>j</span> <span class='o'>&lt;</span> <span class='n'>len</span><span class='p'>;</span><span class='n'>j</span><span class='o'>++</span><span class='p'>){</span>
+			<span class='n'>c</span> <span class='o'>*=</span> <span class='mi'>10</span><span class='p'>;</span>
+			<span class='n'>c</span> <span class='o'>+=</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='o'>-</span> <span class='sc'>&#39;0&#39;</span><span class='p'>;</span>
+		<span class='p'>}</span> 
+		<span class='kt'>char</span> <span class='n'>re</span><span class='p'>[</span><span class='mi'>10</span><span class='p'>]</span> <span class='o'>=</span> <span class='p'>{</span><span class='mi'>0</span><span class='p'>};</span>
+		<span class='n'>j</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span>
+		<span class='k'>while</span><span class='p'>(</span><span class='n'>c</span><span class='p'>){</span>
+			<span class='n'>re</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='o'>=</span> <span class='p'>(</span><span class='n'>c</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span><span class='o'>%</span><span class='mi'>26</span> <span class='o'>+</span> <span class='sc'>&#39;A&#39;</span><span class='p'>;</span>	
+			<span class='n'>j</span><span class='o'>++</span><span class='p'>;</span>
+			<span class='n'>c</span> <span class='o'>=</span> <span class='p'>(</span><span class='n'>c</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span> <span class='o'>/</span> <span class='mi'>26</span><span class='p'>;</span>	
+		<span class='p'>}</span>
+		<span class='k'>for</span><span class='p'>(</span><span class='n'>j</span><span class='o'>--</span><span class='p'>;</span><span class='n'>j</span> <span class='o'>&gt;=</span><span class='mi'>0</span><span class='p'>;</span><span class='n'>j</span><span class='o'>--</span><span class='p'>)</span>
+			<span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;%c&quot;</span><span class='p'>,</span> <span class='n'>re</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]);</span>
+	<span class='p'>}</span>
+<span class='p'>}</span>
+</code></pre></div>
+<h4 id='id8'>任意标号间的转换</h4>
+
+<p>可以将十进制作为中间值来两步转换</p>
+<hr />
+<h4 id='id9'>结语</h4>
+
+<blockquote>
+<p>废话这么多，简而言之：非0-(n-1)符号系统，1-n系统。</p>
+</blockquote>

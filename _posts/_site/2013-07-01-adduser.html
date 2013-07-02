@@ -1,0 +1,45 @@
+<p>When my workmate has spent lots of time working to get a ubuntu run on computer, but failed. We finally decided to copy my virtual ubuntu to him and add a new user account for him, which turns out to be a good good idea. The command used are as follows:</p>
+
+<blockquote>
+<p>geek@ubuntuServ:/etc/skel$ sudo adduser thegeek <br />Password: <br />Adding user &#8216;thegeek’… <br />Adding new group &#8216;thegeek’ (1004). <br />Adding new user &#8216;thegeek’ (1004) with group &#8216;thegeek’. <br />Creating home directory &#8216;/home/thegeek’. <br />Copying files from &#8216;/etc/skel’ <br />Enter new UNIX password: <br />Retype new UNIX password: <br />No password supplied <br />Enter new UNIX password: <br />Retype new UNIX password: <br />passwd: password updated successfully <br />Changing the user information for thegeek <br />Enter the new value, or press ENTER for the default <br />Full Name <span />: The Geek <br />Room Number <span />: 0 <br />Work Phone <span />: 555-1212 <br />Home Phone <span />: 555-1212 <br />Other <span />: <br />Is the information correct? <span>y/N</span> y</p>
+</blockquote>
+
+<p>At here we&#8217;ve done. The next time you log in the system, you choose the new user to log in and finally you get the right system you want.</p>
+
+<p>&#171;&#171;&lt;&#171;&#160;HEAD The user command:</p>
+
+<blockquote>
+<p>su - <br />Password: <br />su: Authentication failure</p>
+</blockquote>
+
+<p>To fix:</p>
+
+<blockquote>
+<p>$ sudo passwd root <br /><span>sudo</span> password for ramesh: <br />Enter new UNIX password: <br />Retype new UNIX password: <br />passwd: password updated successfully</p>
+</blockquote>
+
+<p>The user command</p>
+
+<blockquote>
+<p>su - <br />Password: <br />su: Authentication failure</p>
+</blockquote>
+
+<p>To fix:</p>
+
+<blockquote>
+<p>$ sudo passwd root <br /><span>sudo</span> password for ramesh: <br />Enter new UNIX password: <br />Retype new UNIX password: <br />passwd: password updated successfully</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>79b9fe158175491dc4dd37903e96d711b0ba47da</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
