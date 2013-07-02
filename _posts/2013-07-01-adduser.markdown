@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "add user to linux"
+title: "Add user to linux"
 date: 2013-07-01 19:17
 comments: true
 categories: [Note]
@@ -33,14 +33,17 @@ The command used are as follows:
 
 At here we've done. The next time you log in the system, you choose the new user to log in and finally you get the right system you want.
 
-The user command 
->su -
->Password:
->su: Authentication failure
+The user command:     
+
+>su -      
+>Password:        
+>su: Authentication failure       
 
 To fix:
->$ sudo passwd root
->[sudo] password for ramesh:
->Enter new UNIX password:
->Retype new UNIX password:
->passwd: password updated successfully
+
+>$ sudo passwd root     
+>[sudo] password for ramesh:     
+>Enter new UNIX password:     
+>Retype new UNIX password:     
+>passwd: password updated successfully     
+
