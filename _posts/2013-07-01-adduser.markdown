@@ -33,6 +33,7 @@ The command used are as follows:
 
 At here we've done. The next time you log in the system, you choose the new user to log in and finally you get the right system you want.
 
+<<<<<<< HEAD
 The user command:     
 
 >su -      
@@ -47,3 +48,16 @@ To fix:
 >Retype new UNIX password:     
 >passwd: password updated successfully     
 
+=======
+The user command 
+>su -    
+>Password:    
+>su: Authentication failure    
+
+To fix:   
+>$ sudo passwd root    
+>[sudo] password for ramesh:   
+>Enter new UNIX password:    
+>Retype new UNIX password:   
+>passwd: password updated successfully    
+>>>>>>> 79b9fe158175491dc4dd37903e96d711b0ba47da
