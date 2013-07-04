@@ -25,5 +25,7 @@ I have just reinstalled the system or I'v just get a new machine.
 3.jekyll server --watch  #watch the change at the time you save the file.   
 It seems that the new version has replaced 'auto' by 'watch'
 
+#####vimperator
+A useful tool for more effective web surfing.   
+Enjoy your travel!!!
 ####done
-.

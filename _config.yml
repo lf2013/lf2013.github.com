@@ -3,7 +3,8 @@
 permalink: pretty
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
+#auto: true
+safe: true
 pygments: true
 
 # Themes are encouraged to use these universal variables 
@@ -26,7 +27,7 @@ feedburner : feedname
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://lf2013.github.com
+production_url : http://lf2013.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
