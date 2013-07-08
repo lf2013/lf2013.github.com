@@ -32,7 +32,7 @@
 .sr { color: #a31515 } /* Literal.String.Regex */
 .s1 { color: #a31515 } /* Literal.String.Single */
 body {
-  font: 16px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;
+  font: 14px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;
   padding: 0;
   background: black;
   margin: 10px 40px 10px 100px;
