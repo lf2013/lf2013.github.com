@@ -1,3 +1,8 @@
+.highlight .n { color: #f8f8f2 } /* Name */
+.highlight .o { color: #f92672 } /* Operator */
+.highlight .nl { color: #f8f8f2 } /* Name.Label */
+.highlight .nv { color: #f8f8f2 } /* Name.Variable */
+.highlight .no { color: #66d9ef } /* Name.Constant */
 .highlight  { 
 
 background: #111111;
@@ -39,6 +44,7 @@ padding: 0.2em 0.9em;
 .kt { color: #2b91af } /* Keyword.Type */
 .s { color: #a31515 } /* Literal.String */
 .nc { color: #2b91af } /* Name.Class */
+.nf { color: #92924f} /* Name.Class */
 .ow { color: #0000ff } /* Operator.Word */
 .sb { color: #a31515 } /* Literal.String.Backtick */
 .sc { color: #a31515 } /* Literal.String.Char */
