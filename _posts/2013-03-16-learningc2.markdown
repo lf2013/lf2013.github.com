@@ -142,6 +142,6 @@ int fib(int n){
 {% endhighlight %}
 [答案戳这里](/HeadStream/Tutorial/How-to/2013/03/17/learningc3/index.html)
 
-下期将有`指针、宏、常用函数
+下期将有指针、宏、常用函数
 
 PS:本来打算都写在这期的，结果太多了...
