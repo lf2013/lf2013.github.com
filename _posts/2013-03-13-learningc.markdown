@@ -172,8 +172,7 @@ case 可以有任意多个，要点是注意每个case以break结束，因为一
 	int main()
 	{
 		float radius = 2;	
-		float area = caculateArea(radius); /*调用函数,传参radius，radius是实参，
-											替代r来让函数caculateArea计算并返回面积*/
+		float area = caculateArea(radius); /*调用函数,传参radius，radius是实参，替代r来让函数caculateArea计算并返回面积*/
 		printf("The area is %f\n", area);
 		return 0;
 	}

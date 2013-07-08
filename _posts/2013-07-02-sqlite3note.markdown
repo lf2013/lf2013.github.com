@@ -8,32 +8,80 @@ categories: [Note, Database]
 Recently I wirte a spider to greb infomation. And I have to store the data somewhere for reuse. And I chose sqlite. Here are the command used in python.
 
 ####import the package
->import sqlite3
+{% highlight python %}
+import sqlite3
+{% endhighlight %}
 ####connect to a db
->con = sqlire3.connect("dbname")
+{% highlight python %}
+con = sqlire3.connect("dbname")
+{% endhighlight %}
 ####get a cursor
->cur = con.cursor()
+{% highlight python %}
+cur = con.cursor()
+{% endhighlight %}
 ####initial db
->cur.execute('''creat table if not exists tablename(id integer, name text, score real)''')
+{% highlight python %}
+cur.execute('''creat table if not exists tablename(id integer, name text, score real)''')
+{% endhighlight %}
 ####insert into db
->val = [12, 'asdf', 12.0]
->cur.execute('insert into doc values(?,?,?)', val)
->con.commit()
+{% highlight python %}
+val = [12, 'asdf', 12.0]
+cur.execute('insert into doc values(?,?,?)', val)
+con.commit()
+{% endhighlight %}
 ####select from db
->result = cur.execute('select * from doc')
+{% highlight python %}
+result = cur.execute('select * from doc')
+{% endhighlight %}
 ####use the selected result
->rows = result.fetchall()
->for row in rows:
->>print row
->row = result.fetchone()
->>print row
+{% highlight python %}
+rows = result.fetchall()
+for row in rows:
+	print row
+	row = result.fetchone()
+	print row
+{% endhighlight %}
 ####update db
->cur.execute('update doc det score = ? where id = ?', (score, id))
->con.commit()
+{% highlight python %}
+cur.execute('update doc det score = ? where id = ?', (score, id))
+con.commit()
+{% endhighlight %}
 
+####merge two db(same data format)
+{% highlight python %}
+#write db2 to db1
+import sqlite3
+con1 = sqlite3.connect("db1")
+con2 = sqlite3.connect("db2")
+cur1 = con1.cursor()
+cur2 = con2.cursor()
+f = cur2.execute("select * from doc")
+rows = f.fetchall()
+for row in rows:
+	cur1.execute("insert into doc values(?, ?,..etc.. ,?)," row)
+con1.commit()	
+{% endhighlight %}
+####get sub-db 
+{% highlight python %}
+import sqlite3
+con1 = sqlite3.connect("db1")
+con2 = sqlite3.connect("db2")
+cur1 = con1.cursor()
+cur2 = con2.cursor()
+f = cur2.execute("select * from doc")
+rows = f.fetchall()
+i = 0
+for row in rows:
+	if i < 50: #store top 50
+		cur1.execute("insert into doc values(?, ?,..etc.. ,?)," row)
+	i += 1
+con1.commit()
+{% endhighlight %}
 ####view db in shell
->sqlite3 dbname    
->select * from doc;    
+{% highlight c %}
+sqlite3 dbname    
+select * from doc;    
+{% endhighlight %}
 
 ####tips:
 Don't forget to commit()
