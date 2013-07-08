@@ -5,7 +5,7 @@ date: 2013-07-02 16:17
 comments: true
 categories: [Note, Database]
 ---
-Recently I wirte a spider to grep infomation. And I have to store the data somewhere for reuse. And I chose sqlite. Here are the command used in python.
+Recently I wirte a spider to grasp the infomation. And I have to store the data somewhere for reuse. And I chose sqlite. Here are the command used in python.
 
 ####import the package
 {% highlight python %}
