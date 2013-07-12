@@ -78,11 +78,13 @@ for row in rows:
 con1.commit()
 {% endhighlight %}
 ####view db in shell
-{% highlight c %}
-sqlite3 dbname    
-select * from doc;    
+{% highlight sh %}
+lo@ubuntu:sqlite3 dbname    
+SQLite version 3.7.13 2012-06-11 02:05:22
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite select * from doc;    
 {% endhighlight %}
 
 ####tips:
-Don't forget to commit()
-.
+Don't forget to commit().
