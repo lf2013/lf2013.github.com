@@ -17,26 +17,26 @@ categories: [HeadStream,  How-to]
 #####上期解答[]
 {% highlight c %}
 #include <stdio.h>
-	int is_prime(int x) // 1
-	{
-		int i;
-		for(i = 2;i * i < x;i++)
-			if((x % i) == 0) 
-				return 0;
-		return 1;
+int is_prime(int x) // 1
+{
+	int i;
+	for(i = 2;i * i < x;i++)
+		if((x % i) == 0) 
+			return 0;
+	return 1;
+}
+int main() 
+{
+	int i, count, sum;
+	for(i = 500, sum = 0, count = 0;i < 1000;i++){ // 2
+		if(is_prime(i)){
+			count++;		
+			sum += i;
+		}			
 	}
-	int main() 
-	{
-		int i, count, sum;
-		for(i = 500, sum = 0, count = 0;i < 1000;i++){ // 2
-			if(is_prime(i)){
-				count++;		
-				sum += i;
-			}			
-		}
-		printf("There are %d primes, sum is %d\n", count, sum);
-		return 0;
-	}
+	printf("There are %d primes, sum is %d\n", count, sum);
+	return 0;
+}
 {% endhighlight %}
 解释两处：1.自己定义的函数`is_prime`用于判断数的素性; 2.for循环的初始部分有错？？NO!逗号运算符[]
 
@@ -119,16 +119,16 @@ int main(){
 >阶乘的计算。
 {% highlight c %}
 #include <stdio.h>
-	int f(int x){
-		if(x <= 1) //递归返回边界
-			return 1;
-		else return x * f(x -1);
-	}
-	int main()
-	{
-		printf("%d\n", f(6));
-		return 0;
-	}
+int f(int x){
+	if(x <= 1) //递归返回边界
+		return 1;
+	else return x * f(x -1);
+}
+int main()
+{
+	printf("%d\n", f(6));
+	return 0;
+}
 {% endhighlight %}
 递归就是函数调用本身，递归一定有返回边界；
 
