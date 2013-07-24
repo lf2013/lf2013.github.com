@@ -241,6 +241,7 @@ IS
 NOT
 STRING
 {% endhighlight %}
+###Greedy Or Non-greedy(minimal fashion)
 
 ###Escape sequences
 | |  |
