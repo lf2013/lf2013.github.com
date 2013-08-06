@@ -45,3 +45,25 @@ unzip xx.tar.bz2
 bzip2 -d xx.tar.bz2 ===> xx.tar
 tar -xvf  xx.tar ===> xx
 {% endhighlight %}
+###7.Why markdown List don't work correctly with Chinese
+####code
+{% highlight sh %}
+1. 得到这个世界中已经创建好的账
+2. 不断接收这个世界被广播出
+3. 猜一个幸运随机
+{% endhighlight %}
+####result
+1. 得到这个世界中已经创建好的账
+2. 不断接收这个世界被广播出
+3. 猜一个幸运随机
+####Don't work as we wish. _I found when there is a Endlish word or a digit it would work fine._
+####code
+{% highlight sh %}
+1. 得到这个世界中已经创建好的账x 
+2. 不断接收这个世界被广播出23
+3. 猜一个幸运随机n
+{% endhighlight %}
+####result
+1. 得到这个世界中已经创建好的账x 
+2. 不断接收这个世界被广播出23
+3. 猜一个幸运随机n
