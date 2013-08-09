@@ -1,0 +1,79 @@
+---
+layout: post
+title: "Git note"
+date: 2013-08-05 19:50
+comments: true
+categories: [Note]
+---
+###1.Pretty git branch graphs
+####Wtire in ~/.gitconfig
+{% highlight sh %}
+[user]
+	name = luoluo
+	email = luoluo1920@gmail.com
+[alias]
+	log1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	log2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+{% endhighlight %}
+###2.Error master branch and 'origin/master' have diverged
+
+####Status
+	... o --- o --- A --- B origin/master (upstream work)
+	                 \
+	                  C master (your work)
+####Solution 1
+	git merge origin/master
+	... o --- o --- A --- B origin/master (upstream work)
+	                 \     \
+	                  C --- M master (your work)
+
+####Solution 2
+	git rebase origin master
+	... o --- o --- A --- B origin/master (upstream work)
+	                       \
+	                        C' master (your work)
+
+####Best Solution
+	git pull --rebase
+###3.Errot Your branch is ahead of 'origin/master' by 2 commits.
+####Solution 1
+	git reset --hard origin/master  #Not good enough
+####Solution 2
+	git push origin master
+###4. Write .gitignore
+	When commit we want git to untrack somefile. If we create a .gitignore file. git will use its rules when we commit.
+####Example .gitignore
+	# Compiled source #
+	###################
+	*.com
+	*.class
+	*.dll
+	*.exe
+	*.o
+	*.so
+	
+	# Packages #
+	############
+	# it's better to unpack these files and commit the raw source
+	# git has its own built in compression methods
+	*.7z
+	*.dmg
+	*.gz
+	*.iso
+	*.jar
+	*.rar
+	*.tar
+	*.zip
+	
+	# Logs and databases #
+	######################
+	*.log
+	*.sql
+	*.sqlite
+	
+	######################
+	*~
+####Tips
+Note that git will not ignore a file that was already tracked before a rule was added to this file to ignore it. In such a case the file must be un-tracked, usually with 
+	
+	git rm --cached filename

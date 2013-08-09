@@ -1,0 +1,20 @@
+C-v		Move forward one screenful
+M-v		Move backward one screenful
+
+C-f		Move forward a character
+C-b		Move backward a character
+
+C-p		Move to previous line
+C-n		Move to next line
+
+M-f		Move forward a word
+M-b		Move backward a word
+
+C-a		Move to beginning of line
+C-e		Move to end of line
+
+M-a 	Move back to beginning of sentence
+M-e		Move forward to end of sentence
+
+M-<		Move to the beginning of the whole text
+M->		Move to the end of the whole text
