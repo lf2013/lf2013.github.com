@@ -109,7 +109,7 @@ reversed_h = Hash[h.to_a.reverse]
 	aaa@111012d102:~$ 
 	
 ####Get the file from sever using _scp_
-	lo@ubuntu:~$ ssh aaa@10.10.7.41:/home/baina/somefile ./
+	lo@ubuntu:~$ scp aaa@10.10.7.41:/directory/to/somefile ./
 	aaa@10.10.7.41's password: 
 	somefile		100% 1675     1.6KB/s   00:00    
 	lo@ubuntu:~$ 
