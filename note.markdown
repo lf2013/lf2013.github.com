@@ -16,3 +16,5 @@ layout: ft2
 >>The C Programming Language(宸茶喘)   
 >>閲嶆瀯鈥斺�旀敼鍠勬棦鏈変唬鐮佺殑璁捐   	
 >>Lucene  
+>>Think in Java
+>>设计模式解
