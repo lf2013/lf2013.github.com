@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Tips for vim"
+date: 2013-10-26 12:36
+comments: true
+categories: [Note]
+---
+###1.How to copy between two terminals using vim?
+1. open file a
+2. copy the items (using yy)
+3. *close file a (Main point)*
+4. open file b
+5. paste the items
+6. save and exist file b
+
+###2.How to copy to system clipboard?
+	if `:echo has('clipboard')` return 0
+		install clipboard first by running
+		sudo apt-get install vim-gtk
+	else `:set clipboard=unnamedplus`
+		use "+y | "+2yy to copy and +p to paste

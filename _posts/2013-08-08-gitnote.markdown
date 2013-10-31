@@ -104,7 +104,12 @@ categories: [Note, Tools]
 
 ###5.Error On branch master
 ####On branch master Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
-###6. Write .gitignore
+###6. Error 
+	git push -u origin master
+	ERROR: Permission to user/repo denied to user/repo
+####solution
+	This error means the key you are pushing with is attached to another repository as a *deploy key*, and does not have access to the repository you are trying to push to. To remedy this, *remove the deploy key from the repository and attach the key to your user account instead*.
+###7. Write .gitignore
 	When commit we want git to untrack somefile. If we create a .gitignore file. git will use its rules when we commit.
 ####Example .gitignore
 	# Compiled source #
