@@ -3,7 +3,7 @@ layout: post
 title: "My Little Tips"
 date: 2013-07-19 16:09
 comments: true
-categories: [Note]
+categories: [Note, SystemUsage]
 ---
 ###1.How to copy between two terminals using vim?
 1.open file a
@@ -113,7 +113,7 @@ reversed_h = Hash[h.to_a.reverse]
 	aaa@10.10.7.41's password: 
 	somefile		100% 1675     1.6KB/s   00:00    
 	lo@ubuntu:~$ 
-###10.Copy and Paste in linux
+###10.Copy and Paste from terminal with keyboard in linux
 	`shift` + `ctrl` + c		#to copy
 	`shift` + `ctrl` + v		#to paste
 

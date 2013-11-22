@@ -19,3 +19,11 @@ categories: [Note]
 		sudo apt-get install vim-gtk
 	else `:set clipboard=unnamedplus`
 		use "+y | "+2yy to copy and +p to paste
+###3.How to put the current line to the top of the screen?
+	from time to time, I'm typing at the bottom of the screen.   
+	So I need to go back to the top.   
+####solution:
+	z<return> || zt #to the top
+	zb #to the bottom
+	zz #to the middle
+#####Tips:All of those command keep the cursor where it was
