@@ -28,7 +28,10 @@ categories: [Note]
 	zz #to the middle
 #####Tips:All of those command keep the cursor where it was
 ###4.vim moving between windows?
-####<C-w>
+####C-w
 ###5.Debug using vim?
-####Use pyclewn to debug C/Python (Using gdb/pdb)
-[http://pyclewn.sourceforge.net/](See more)
+#### makefile + pyclewn + vim
+Use pyclewn to debug C/Python (Using gdb/pdb)    
+**See more on **
+[pyclewn org](http://pyclewn.sourceforge.net/)
+
