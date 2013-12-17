@@ -60,11 +60,12 @@
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
 body {
-  font: 16px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;
+  font: 15px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;
   padding: 0;
   background: black;
   margin: 10px 40px 10px 100px;
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -78,12 +79,12 @@ a:hover {
 }
 
 #main {
-  width: 760px;
+  width: 660px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 1);
 }
 header {
-  padding: 0 10px;
+  padding: 0 35px;
   overflow: hidden;
 }
 h1 {
@@ -136,3 +137,52 @@ body div.content {}
         border: inherit;
         color: #000000;
     }
+.bigtitle {
+font-size: small;
+line-height: 1em;
+margin-bottom: 4em;
+margin-top: 0.01em;
+margin-left: 0em;
+padding-right: 3em;
+}
+.bigtitle ul {
+  margin: 0;
+  padding: 0;
+}
+.section {
+font-size: 89%;
+line-height: 1em;
+margin-bottom: 0.01em;
+margin-top: 0.01em;
+margin-left: 7.5em;
+padding-right: 3em;
+}
+.section h1 {
+	font-family: Palatino, georgia, "宋体";
+	font-size: 100%;
+	line-height: 1.43em;
+	position: absolute;
+	width: 6em;
+	max-width: 6em;
+	margin-left: -7.5em;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+.section p { margin-bottom: 1.43em; } 
+
+ 
+
+/* @end */
+
+.list .title { font-weight: 200; }
+p.line { position: relative; margin: 0; }
+p.excerpt { margin: 0; }
+.comments { font-size: smaller; position: absolute; color: silver; right: 0; top: 0; }
+.excerpt { color: black; }
+
+pre {
+	padding-left: 40px;
+	word-wrap: break-word; 
+　 word-break: normal;
+   text-indent: 0em;	
+}

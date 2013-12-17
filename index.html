@@ -6,8 +6,13 @@ title: Never stop searching...
 <ul>
 	<body>
 	{% for post in site.posts %}
-　　　<li>{{ post.date | date_to_string }}   >>  <a href="{{ post.url }}">{{ post.title }}</a></li> 
-　　　　{% endfor %}
+		<div class="section list">
+		  <h1> {{ post.date | date_to_string }} </h5>
+  			<p class="line">
+		  <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+		  </p>
+		</div>
+　{% endfor %}
 	</body>
 </ul>
 </html>

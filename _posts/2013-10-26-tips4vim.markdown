@@ -20,8 +20,7 @@ categories: [Note]
 	else `:set clipboard=unnamedplus`
 		use "+y | "+2yy to copy and +p to paste
 ###3.How to put the current line to the top of the screen?
-	from time to time, I'm typing at the bottom of the screen.   
-	So I need to go back to the top.   
+From time to time, I'm typing at the bottom of the screen.So I need to go back to the top.   
 ####solution:
 	z<return> || zt #to the top
 	zb #to the bottom
@@ -34,4 +33,13 @@ categories: [Note]
 Use pyclewn to debug C/Python (Using gdb/pdb)    
 **See more on **
 [pyclewn org](http://pyclewn.sourceforge.net/)
+###6.vim paste indent problem?
+When I paste code into document from clipboard, I get extra space in new line:    
 
+	line    
+		line   
+			line
+####To solve this:
+	:set paste   #turn on the paste mode
+	#do the paste you need
+	:set nopaste  #turn off the paste mode

@@ -6,101 +6,18 @@ comments: true
 categories: [Note, Java]
 ---
 ###pinyin4j是一提供中文字符转化成多种可定制拼音系统的类库.
-
-	import net.sourceforge.pinyin4j.*;
-	import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
-	import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
-	import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
-
-	class Hanyu
-	{
-	    private HanyuPinyinOutputFormat format = null;
-	    private boolean addEnglish;
-	    public Hanyu(boolean addEnglish) {
-	        format = new HanyuPinyinOutputFormat();
-	        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
-	        this.addEnglish = addEnglish;
-	    }
-	
-	    private String getCharacterPinYin(char c) {
-	        String[] pinyin = null;
-	        try {
-	            pinyin = PinyinHelper.toHanyuPinyinStringArray(c, format);
-	        } catch(BadHanyuPinyinOutputFormatCombination e) {
-	            e.printStackTrace();
-	        }
-	        if (pinyin == null) {
-	            return null;
-	        }
-	        return pinyin[0];
-	    }
-	
-	    public String getStringPinYin(String str) {
-	        StringBuilder sb = new StringBuilder();
-	        boolean lastIsChinese = false;
-	        for (int i = 0; i < str.length(); ++i) {
-	            String currentPinyin = getCharacterPinYin(str.charAt(i));
-	
-	            if (currentPinyin == null) {
-	                if (addEnglish) {
-	                    if (lastIsChinese) {
-	                        sb.append(" ");
-	                    }
-	                    sb.append(str.charAt(i));
-	                    lastIsChinese = false;
-	                }
-	            } else {
-	                sb.append(" ");
-	                sb.append(currentPinyin);
-	                lastIsChinese = true;
-	            }
-	        }
-	        return sb.length() == 0 ? null : sb.toString().trim();
-	    }
-	}
-	
-	public class SearchTeat {
-	    public static void main(String[] args) {
-	        Hanyu hanyu = new Hanyu(true);
-	        System.out.println(hanyu.getStringPinYin("拼音转换测试"));
-	
-	    }
-	
-	}
+<script src="https://gist.github.com/luoluo/8004393.js"></script>
 #####Result
 	pin yin zhuan huan ce shi
 	
 ###Source code analysis
 ####使用Hashmap来存储数据，其中键值为汉字的编码，查询的效率是O(1).
 #####load hashmap
-	
-	private void initializeResource() {
-	   try {
-	     final String resourceName = "/pinyindb/unicode_to_hanyu_pinyin.txt";
-	
-	     setUnicodeToHanyuPinyinTable(new Properties());
-	     getUnicodeToHanyuPinyinTable().load(ResourceHelper.getResourceInputStream(resourceName));
-	
-	   } catch (FileNotFoundException ex) {
-	     ex.printStackTrace();
-	   } catch (IOException ex) {
-	     ex.printStackTrace();
-	   }
-	 }
+<script src="https://gist.github.com/luoluo/cac4d5ce210b82ade661.js"></script>
 
 #####Search
+<script src="https://gist.github.com/luoluo/8004304.js"></script>
 	
-	private String getHanyuPinyinRecordFromChar(char ch) {
-	 // convert Chinese character to code point (integer)
-	   int codePointOfChar = ch;
-	
-	   String codepointHexStr = Integer.toHexString(codePointOfChar).toUpperCase();
-	
-	   // fetch from hashtable
-	   String foundRecord = getUnicodeToHanyuPinyinTable().getProperty(codepointHexStr);
-	
-	   return isValidRecord(foundRecord) ? foundRecord : null;
-	}
 #####The db is something like this:
 	3007 (ling2)
 	4E00 (yi1)
