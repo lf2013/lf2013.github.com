@@ -1,5 +1,5 @@
 ---
-layout: ft2
+layout: ft
 ---
 >书单
 
@@ -15,4 +15,5 @@ layout: ft2
 >>编码的奥秘    
 >>TAOCP (已购卷三)    
 >>The C Programming Language(已购)    
->>重构——改善既有代码的设计 Lucene   
+>>重构——改善既有代码的设计    
+>>Lucene   
