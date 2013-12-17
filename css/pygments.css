@@ -149,6 +149,18 @@ padding-right: 3em;
   margin: 0;
   padding: 0;
 }
+.subtitle {
+font-size: initial;
+line-height: 1.5em;
+margin-bottom: 4em;
+margin-top: 7em;
+margin-left: 0em;
+padding-right: 3em;
+}
+.subtitle ul {
+  margin: 0;
+  padding: 0;
+}
 .section {
 font-size: 89%;
 line-height: 1em;
