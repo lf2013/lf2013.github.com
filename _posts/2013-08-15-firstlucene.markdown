@@ -6,6 +6,7 @@ comments: true
 categories: [Note, Java, Programming, Lucene]
 ---
 Lucene first usage.
+
 <script src="https://gist.github.com/luoluo/18e6fc8b5c0d8244529b.js"></script>
 
 ####Run result:
