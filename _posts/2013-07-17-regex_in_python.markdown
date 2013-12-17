@@ -3,7 +3,7 @@ layout: post
 title: "Regex In Python"
 date: 2013-07-17 13:14
 comments: true
-categories: [Python, Regex]
+categories: [Skill, Languages]
 ---
 
 Regex is a important tool when dealing text.  

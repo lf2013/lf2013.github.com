@@ -3,7 +3,7 @@ layout: post
 title: "Git note"
 date: 2013-08-08 19:50
 comments: true
-categories: [Note, Tools]
+categories: [Tools, Skill]
 ---
 ###-1.Error:
 	lo@ubuntu:~/try/java/test$ git push origin master

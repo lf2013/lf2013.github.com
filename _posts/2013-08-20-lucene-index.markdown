@@ -3,7 +3,7 @@ layout: post
 title: "Lucene Index Analysis"
 date: 2013-08-20 21:40
 comments: true
-categories: [Note, Java, Programming, Lucene]
+categories: [Tech]
 ---
 Lucene index test
 

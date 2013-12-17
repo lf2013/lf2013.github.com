@@ -3,7 +3,7 @@ layout: post
 title: "网站推荐"
 date: 2012-03-17 10:50
 comments: true
-categories: [Note, How-to]
+categories: [Math]
 ---
 1. [MathWorld是线上数学百科全书](http://mathworld.wolfram.com)   
 	MathWorld是线上数学百科全书，由沃夫朗研究公司（Wolfram Research inc.，WRI）赞助

@@ -3,7 +3,7 @@ layout: post
 title: "linux 下文件乱码的问题"
 date: 2012-03-21 19:53
 comments: true
-categories: linux 
+categories: Skill
 ---
 
    问题的出现在与Windows下与linux下的文件编码的差异。在wendows下的默认文件编码方式是GBK(gb2312)；而在Linux下的默认编码方式为UTF-8.这样在linux系统下打开一个在Win下编辑的文件就常常会出现乱码。

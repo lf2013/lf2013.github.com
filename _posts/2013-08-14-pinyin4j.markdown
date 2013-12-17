@@ -3,7 +3,7 @@ layout: post
 title: "pinyin4j"
 date: 2013-08-14 13:50
 comments: true
-categories: [Note, Java]
+categories: [Tools, Languages]
 ---
 ###pinyin4j是一提供中文字符转化成多种可定制拼音系统的类库.
 <script src="https://gist.github.com/luoluo/8004393.js"></script>

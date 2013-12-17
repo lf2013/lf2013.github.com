@@ -3,7 +3,7 @@ layout: post
 title: "血气"
 daote: 2012-03-29 21:41
 comments: true
-categories: [FeelStream, Travel]
+categories: [FeelStream]
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title: "常见文件系统性能"
 date: 2013-04-25 21:26
 comments: true
-categories: [Note]
+categories: [Tech]
 ---
 ######本文为一篇译文，[原文](http://oss.sgi.com/projects/xfs/papers/filesystem-perf-tm.pdf)
 Linux上流行的文件系统：*Ext2, Ext3, ReiserFS,XFS, and JFS*(2002)

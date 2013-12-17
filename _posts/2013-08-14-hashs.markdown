@@ -3,7 +3,7 @@ layout: post
 title: "Hash in Java"
 date: 2013-08-14 20:50
 comments: true
-categories: [Note, Java, Programming]
+categories: [Languages]
 ---
 Hash is a useful tool in everyday programming work. Here is a brief summary.
 ###HashMap & HashSet

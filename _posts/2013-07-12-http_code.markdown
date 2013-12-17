@@ -3,7 +3,7 @@ layout: post
 title: "Http Status Code"
 date: 2013-07-12 11:37
 comments: true
-categories: [Note, Http, Web]
+categories: [Skill]
 ---
 ###part of Hypertext Transfer Protocol -- HTTP/1.1
 RFC 2616 Fielding, et al.

@@ -3,7 +3,7 @@ layout: post
 title: "Lucene Simple Usage"
 date: 2013-08-15 13:50
 comments: true
-categories: [Note, Java, Programming, Lucene]
+categories: [Tech]
 ---
 Lucene first usage.
 

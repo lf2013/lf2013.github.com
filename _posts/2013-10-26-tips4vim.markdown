@@ -3,7 +3,7 @@ layout: post
 title: "Tips for vim"
 date: 2013-10-26 12:36
 comments: true
-categories: [Note]
+categories: [Tools, Skill]
 ---
 ###1.How to copy between two terminals using vim?
 1. open file a
