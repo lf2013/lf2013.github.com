@@ -198,7 +198,14 @@ int main()
 	C是一种自由格式的语言，并没有规则要求怎样书写，但是遵循一定约定，可以使代码易读易修改。
 	再来一个极端的例子
 {% highlight c %}
-int max(int a,int b,int c){if(a>b)if(a>c)return a;else return c;else return b;}
+int max(int a,int b,int c) {
+	if(a>b)
+		if(a>c)
+			return a;
+		else 
+			return c;
+	else return b;
+}
 {% endhighlight %}
 {% highlight c %}
 int max(int a,int b,int c){

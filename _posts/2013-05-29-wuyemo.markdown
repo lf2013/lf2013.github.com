@@ -24,20 +24,19 @@ I have just reinstalled the system or I'v just get a new machine.
 
 ####ruby gem jekyll
 #####0.install [ruby](https://www.ruby-lang.org/en/downloads/)  Using RVM("Ruby Versiom Manager").
-		curl -L https://get.rvm.io | bash -s stable --ruby	
+	curl -L https://get.rvm.io | bash -s stable --ruby	
 
 #####1.install [gem](http://rubygems.org/pages/download)   
-		unzip | cd xx | ruby setup.rb   
+	unzip | cd xx | ruby setup.rb   
 
 #####2.gem install jekyll (See tips if have problems)  
-		gem install jekyll
+	gem install jekyll
 #####3.jekyll the blog
-		git clone xxx
-		jekyll server --watch  #watch the change at the time you save the file.   
+	git clone xxx
+	jekyll server --watch  #watch the change at the time you save the file.   
 #####Tips: changing gem sources
-		gem sources #show the current source
-		gem sources -a http://ruby.taobao.org #add a source
-		gem sources -r http://rubygems.org/ #remove a source
-
+	gem sources #show the current source
+	gem sources -a http://ruby.taobao.org #add a source
+	gem sources -r http://rubygems.org/ #remove a source
 
 ####done
