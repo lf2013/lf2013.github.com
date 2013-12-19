@@ -43,3 +43,15 @@ When I paste code into document from clipboard, I get extra space in new line:
 	:set paste   #turn on the paste mode
 	#do the paste you need
 	:set nopaste  #turn off the paste mode
+###7.using book mark?
+	Command	 Description
+	ma	 set mark a at current cursor location
+	'a	 jump to line of mark a
+	`a	 jump to position of mark a
+	d'a	 delete from current line to line of mark a
+	d`a	 delete from current posi to posi of mark a
+	c'a	 change from current line to line of mark a
+	y`a	 yank   from cursor to position of mark a (to unnamed buffer)
+	:marks	 list all the current marks
+	:marks aB	 list marks a, B
+	
