@@ -12,7 +12,7 @@ layout: ft
 >>Head first Design pattern(已读)     
 >>代码整洁之道(已读)      
 >>C++ Primer 5ed（在读）  
->>TCP/IP详解 卷1：协议
+>>TCP/IP详解 卷1：协议     
 >>APUE    
 >>敏捷软件开发    
 >>程序员修炼之道    
