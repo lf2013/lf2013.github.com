@@ -60,7 +60,8 @@
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
 body {
-  font: 15px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;
+  /*font: 15px/1.5 cursive, sans-serif, fantasy, monospace, serif,  verdana, helvetica-neue, helvetica, arial;*/
+  font: 15px/1.5 Georgia,"Times New Roman",Times,"Hiragino Sans GB","Hiragino Kaku Gothic Pro","STXihei",Hei,SimSun,"WenQuanYi Micro Hei",sans-serif;
   padding: 0;
   background: black;
   margin: 10px 40px 10px 100px;
