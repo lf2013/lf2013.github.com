@@ -8,6 +8,7 @@ categories: [Tools, Skill]
 ####1.在Debug之前，编译时允许debug.
 	
 	g++ -g xxx.cpp -o xxx
+
 ####2.使用gdb来debug,常用命令：
 
 	gdb xxx	#开始debug	

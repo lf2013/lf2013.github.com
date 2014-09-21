@@ -9,12 +9,13 @@ categories: [Skill, Languages]
 Regex is a important tool when dealing text.  
 In __python__ we have a library named __re__.  
 Most of the **regular expression operations** are available as __module-level function and RegexObject methods__.
-###import the lib
+
+*import the lib*
 {% highlight python %}
 import re
 {% endhighlight %}
 
-### re.compile(pattern, flag=0)
+*re.compile(pattern, flag=0)*
 >Compile a regular expression pattern into a regular expression object, which can be used for matching using its __match()__ and __search()__ methods, described below.
 {% highlight python %}
 import re
@@ -30,7 +31,7 @@ for regex in regexs:
 		print "Not Match"
 {% endhighlight %}
 
-### re.search(pattern, string)
+*re.search(pattern, string)*
 >Scan through string looking for a location where the regular expression pattern produces a match, and return a corresponding __MatchObject__ instance.Return **None** if no position in the string matches the pattern; note that this is different from finding a zero-length match at some point in the string.
 {% highlight python %}
 #!/usr/bin/python
@@ -48,7 +49,8 @@ for regex in regexs:
 	else:
 		print "Not Match"
 {% endhighlight %}
-### RegexObject.search(string)
+
+*RegexObject.search(string)*
 {% highlight python %}
 #!/usr/bin/python
 #encoding:utf-8
@@ -62,7 +64,7 @@ print 'Found "%s"\nin "%s"\nfrom %d to %d ("%s")' % \
       (match.re.pattern, match.string, s, e, text[s:e])
 {% endhighlight %}
 
-###re.match(pattern, srting)
+*re.match(pattern, srting)*
 >If zero or more characters at the beginning of string match this regular expression, return a corresponding *MatchObject* instance. Return *None* if the string does not match the pattern; note that this is different from a zero-length match.
 {% highlight python %}
 #!/usr/bin/python
@@ -74,7 +76,8 @@ match = re.match(regex, text)
 if match: 
 	print match.group(1),match.group(2),
 {% endhighlight %}
-###RegexObject.match(string)
+
+*RegexObject.match(string)*
 {% highlight python %}
 #!/usr/bin/python
 #encoding:utf-8
@@ -87,9 +90,10 @@ if match:
 {% endhighlight %}
 
 #### Match object has many attributes:
-##Match more than one
 
-###re.findall(pattern, string)
+**Match more than one**
+
+*re.findall(pattern, string)*
 {% highlight python %}
 #!/usr/bin/python
 #encoding:utf-8
@@ -107,7 +111,7 @@ is
 is
 {% endhighlight %}
 
-###re.finditer(pattern, string)
+*re.finditer(pattern, string)*
 {% highlight python %}
 #!/usr/bin/python
 #encoding:utf-8
@@ -127,8 +131,8 @@ Found  is at:  2 4
 Found  is at:  5 7
 {% endhighlight %}
 
-##Pattern Syntax
-###Repetition
+**Pattern Syntax**
+*Repetition*
 {a, b}
 
 | |  |
@@ -241,9 +245,9 @@ IS
 NOT
 STRING
 {% endhighlight %}
-###Greedy Or Non-greedy(minimal fashion)
+**Greedy Or Non-greedy(minimal fashion)**
 
-###Escape sequences
+*Escape sequences* #TODO
 | |  |
 |--|---|
 |\d|any decimal digit|
@@ -252,7 +256,7 @@ STRING
 |\W|any 'non-word' character|
 |\s|any whitespace character|
 |\S|any character that is not a whitespace character|
-###Anchors
+*Anchors*
 | |  |
 |--|---|
 |^ |the current match point is at the start of the subject string|
@@ -261,6 +265,7 @@ STRING
 |\B|not a word boundary|
 |\A|start of subject (independent of multiline mode)|
 |\Z|end of subject or newline at end (independent of multiline mode)|
+
 ###Reference:
 [python.org](http://docs.python.org/2/library/re.html)    
 [regex php](http://www.php.net/manual/zh/reference.pcre.pattern.syntax.php)

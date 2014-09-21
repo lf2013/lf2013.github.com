@@ -5,14 +5,18 @@ date: 2013-04-25 21:26
 comments: true
 categories: [Tech]
 ---
+
 ######本文为一篇译文，[原文](http://oss.sgi.com/projects/xfs/papers/filesystem-perf-tm.pdf)
 Linux上流行的文件系统：*Ext2, Ext3, ReiserFS,XFS, and JFS*(2002)
+
 ###Filesystem Descriptions
+
 ####2.1 Ext2
 由Wayne Davidson设计, 是ext文件系统的加强版。Ext2 是standard Linux filesystem. 
 
 ####2.2 Ext3
 Ext3是一种日志式文件系统，是对ext2系统的扩展，它兼容ext2。
+
 ####2.3 ReiserFS
 由Hans Reiser开发, ReiserFS 成为standard Linux Kernel的部分（自2.4.1起）。
 ReiserFS 使用B\*平衡树来组织 描述符、文件、数据。ReiserFS 支持节省空间策略(tailpacking),把小文件移到B\*树的叶子。

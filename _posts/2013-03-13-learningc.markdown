@@ -5,16 +5,18 @@ date: 2013-03-13 22:22
 comments: true
 categories: [HeadStream,  Languages]
 ---
-##目标
+####目标
 白话C，最短时间内写出简单C程序.
 **基础篇**
-##关键字
+
+####关键字
 + 1.变量
 + 2.控制结构
 + 3.函数
 + 4.编程风格
 
 ----	
+
 ###从一段C程序说起
 {% highlight c %}
 int main() 
@@ -34,6 +36,7 @@ int main()
 {% endhighlight %}
 
 ---
+
 ###变量
 {% highlight c %}
 int main() 
@@ -61,10 +64,12 @@ int main()
 {% endhighlight %}
 
 ---
+
 ###控制结构：顺序、分支、循环
 >顺序结构即自然的顺序执行结构，是C默认执行的顺序。
 >分支结构是判断条件，来改变程序的执行顺序的。
 >循环结构是给定 初始值，终止条件，迭代值，来重复执行。
+
 ####分支结构的实现 `if` 
 {% highlight c %}
 int main() 
@@ -77,6 +82,7 @@ int main()
 	return 0;
 } 
 {% endhighlight %}
+
 ####分支结构的实现 `if` `else` 
 {% highlight c %}
 int main() 
@@ -108,6 +114,7 @@ int main()
 } 
 {% endhighlight %}
 注意此例中的那些{},它们是成对出现的，表示代码块，若满足条件，均会执行。若只有一条语句，可以省略。
+
 ####分支结构的实现 `switch`实现分支结构
 {% highlight c %}
 int main()
@@ -123,6 +130,7 @@ int main()
 case 可以有任意多个，要点是注意每个case以break结束，因为一个case 满足执行后并不会主动退出switch,而是顺序向下判断之后的case.而情况往往是满足一个case就退出switch,这时就要记得加**break**.
 
 ---
+
 ####循环结构的实现 for
 {% highlight c %}
 int main() 
@@ -135,6 +143,7 @@ int main()
 	return 0;
 } 
 {% endhighlight %}
+
 ####循环结构的实现 while 
 {% highlight c %}
 int main() 
@@ -148,6 +157,7 @@ int main()
 	return 0;
 } 
 {% endhighlight %}
+
 ####循环结构的实现 do-while 
 {% highlight c %}
 int main() 
@@ -163,6 +173,7 @@ int main()
 {% endhighlight %}
 
 ----
+
 ####*函数* 定义及调用
 {% highlight c %}
 float caculateArea(float r)//定义计算面积函数caculateArea，以float(浮点型)为参数，返回float型
@@ -179,7 +190,9 @@ int main()
 {% endhighlight %}
 	
 ---
+
 ###编程风格
+
 #####注释
 	注释有两种形式(// 和 /**/)，//使用于单行注释；而/**/使用于多行注释，从第一个/*到第一个*/之间的内容均为注释，编译时直接当**空格**处理。
 	来一个极端的例子
@@ -194,6 +207,7 @@ int main()
 //如果没错定义了几个变量呢？
 }
 {% endhighlight %}
+
 #####缩进
 	C是一种自由格式的语言，并没有规则要求怎样书写，但是遵循一定约定，可以使代码易读易修改。
 	再来一个极端的例子
@@ -219,7 +233,8 @@ int max(int a,int b,int c){
 以上两个程序均返回3个值里的最大值，缩进的威力应该显然。所以保持好的编程风格大有裨益。
 
 ---
-###小结，有码有真相
+
+####小结，有码有真相
 	写一个计算出500到1000以内有多少素数，并求这些素数的和。
 {% highlight c %}
 int main()
